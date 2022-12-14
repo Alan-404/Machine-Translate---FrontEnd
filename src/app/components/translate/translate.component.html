@@ -1,0 +1,11 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+<div class="d-flex">
+    <mat-form-field class="example-full-width w-50">
+        <textarea placeholder="Enter English" style="font-size: 20px;" (keyup)="getData($event)" matInput rows="10"  class="border p-2"></textarea>
+    </mat-form-field>
+    &#160;&#160;&#160;&#160;&#160;
+    <mat-form-field class="example-full-width w-50">
+        <textarea placeholder="Vietnam Result" style="font-size: 20px;" matInput rows="10" class="border p-2" readonly>{{result}}</textarea>
+    </mat-form-field>
+</div>
+<button (click)="translate()" mat-stroked-button color="primary">Translate</button>
